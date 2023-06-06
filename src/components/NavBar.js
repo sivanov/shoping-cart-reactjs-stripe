@@ -2,6 +2,7 @@ import { Button, Container, Navbar, Modal } from "react-bootstrap";
 import { useState } from "react";
 import { CartContext } from "../CartContext";
 import { useContext } from "react";
+import CartProduct from "./CartProduct";
 
 function NavBarComponent() {
   const cart = useContext(CartContext);
@@ -11,9 +12,12 @@ function NavBarComponent() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  console.log('cart items: ', cart.items)
-  const productsCount = cart.items.reduce((sum, product) => sum + product.quantity, 0)
-  console.log('productsCount:', productsCount)
+  console.log("cart items: ", cart.items);
+  const productsCount = cart.items.reduce(
+    (sum, product) => sum + product.quantity,
+    0
+  );
+  console.log("productsCount:", productsCount);
 
   return (
     <>
@@ -29,21 +33,23 @@ function NavBarComponent() {
           <Modal.Title>Shopping Cart</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          { productsCount > 0 ?
+          {productsCount > 0 ? (
             <>
               <p>Items in your cart</p>
               {cart.items.map((currentProduct, idx) => (
-                <h1>{currentProduct.id}</h1>
+                <CartProduct
+                  key={idx}
+                  id={currentProduct.id}
+                  quantity={currentProduct.quantity}
+                ></CartProduct>
               ))}
 
               <h1>Total: {cart.getTotalCost().toFixed(2)}</h1>
-              <Button variant="success">
-                Purchase items!
-              </Button>
+              <Button variant="success">Purchase items!</Button>
             </>
-           : 
+          ) : (
             <h1>There are no items in your cart!</h1>
-          } 
+          )}
         </Modal.Body>
       </Modal>
     </>
