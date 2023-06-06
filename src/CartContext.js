@@ -81,10 +81,8 @@ export function CartProvider({ children }) {
     cartProducts.map((cartItem) => {
         const productData = getProductData(cartItem.id)
         totalCost += (productData.price * cartItem.quantity)
-
-        return totalCost
     })
-    
+    return totalCost
   }
 
   const contextValue = {
