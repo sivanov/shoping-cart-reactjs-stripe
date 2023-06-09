@@ -1,23 +1,13 @@
 const productsArray = [
     {
-        id: '1',
+        id: 'price_1NGmKnLi9CvIgB80tQNYcycw', // stripe product is for TV
         title: 'TV',
         price: 300
-    },
-    {
-        id: '2',
-        title: 'coffee',
-        price: 6
-    },
-    {
-        id: '3',
+    },{
+        id: 'price_1NGmNiLi9CvIgB80T8t6IiIM', // stripe product is for TV
         title: 'Phone',
         price: 150
-    },{
-        id: '4',
-        title: 'coffee',
-        price: 8
-    },
+    }
 ]
 
 function getProductData(id) {
