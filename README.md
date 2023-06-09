@@ -39,3 +39,22 @@ Copy product key id from Stripe product page
 
 after we add in  src/NavBar.js checkout async function
 ![](./screenshots/stripe-004-ineracting-with-express-back-end-and-stripe-checkout-page.png)
+
+Test Visa card info is:
+```
+VISA card number: 4242 4242 4242 4242
+Date: 12 / 34
+CVC: 123
+Country: United State
+ZIP code: 12345
+```
+![](./screenshots/stripe-005-test-VISA-card-info.png)
+
+Adn after successful paid, we are redirect to out page again
+![](./screenshots/stripe-006-successful-paymant-and-redirect-to-out-page.png)
+
+Now go to Stripe Dashboard > Payments and see if transaction exist
+![](./screenshots/stripe-007-successful-paymant-from-stripe-dashboard.png)
+
+Notice: (Optional step) If checkout on Stripe page do not work try to add company name for this demo
+https://dashboard.stripe.com/account
