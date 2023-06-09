@@ -4,6 +4,8 @@ Tech stack: Front-end e-commerce shopping cart with with ReactJS, React-Bootstra
 Final view(notice still in progress):
 ![](./screenshots/shoping-cart-demo-001.png)
 
+Link to Back-end example server: https://github.com/sivanov/shoping-cart-reactjs-stripe-back-end
+
 ```
 npx create-react-app frontend-reactjs
 cd frontend-reactjs
